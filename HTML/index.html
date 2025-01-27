@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC Home</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/background.css">
+    
+</head>
+<body>
+    <!-- non mi è ancora chiarissimo l'uso del "ul" e "li" al posto di altri elementi infatti ho usato anche "section" perché mi sembrava più appropriato-->
+    <header>
+        <!-- barra di navigazione con "position:fixed" in modo che rimanga sempre al top della pagina -->
+        <nav id="nav-bar">
+            <!-- logo nav-bar che ti porta alla home se premuto -->
+            <a href="index.html">
+                <img id="navBarLogo" src="../IMG/Logo/LogoNoBackground.png">
+            </a>
+            <!-- parte sinistra della nav-bar -->
+            <ul id="navBarLeft">
+                <input id="searchBar" type="text" placeholder="Non trovi qualcosa? Cercalo">
+                <button id="searchButton">
+                    <img id="searchIcon" src="../IMG/Icons/Search2.png">
+                </button>
+            </ul>
+            <!-- parte destra della nav-bar -->
+            <ul id="navBarRight">
+                <!-- link alla pagina di download -->
+                <a href="download.html">
+                    <button class="navBarButton">
+                        Download
+                    </button>
+                </a>
+                <!-- link alla pagina di esplora -->
+                <a href="esplora.html">
+                    <button class="navBarButton">
+                        Esplora
+                    </button>
+                </a>
+                <!-- link alla pagina di informazioni -->
+                <a href="chiSiamo.html">
+                    <button class="navBarButton">
+                        Chi siamo
+                    </button>
+                </a>
+                <!-- div che contiene i bottoni per accedere e registrarsi in verticale -->
+                <div id="endSect">
+                    <!-- link alla pagina di register -->
+                    <a href="register.html">
+                        <button class="navBarButtonUser">
+                            Registrati
+                        </button>
+                    </a>
+                    <!-- link alla pagina di login -->
+                    <a href="login.html">
+                        <button class="navBarButtonUser">
+                            Accedi
+                        </button>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <!--
+        background a bolle animate, puramente estetico e nemmeno fatto benissimo
+        perché devo farlo partire da una determinata altezza ma senza JS non posso salvare l'altezza della pagina
+        e quindi non è detto che sia sempre il fondo o come nella pagina di login che è troppo in basso
+    -->
+    <section id="background">
+        <span id="bolla1"></span>
+        <span id="bolla2"></span>
+        <span id="bolla3"></span>
+        <span id="bolla4"></span>
+        <span id="bolla5"></span>
+        <span id="bolla6"></span>
+        <span id="bolla7"></span>
+        <span id="bolla8"></span>
+        <span id="bolla9"></span>
+        <span id="bolla10"></span>
+        <span id="bolla11"></span>
+        <span id="bolla12"></span>
+        <span id="bolla13"></span>
+    </section>
+    <!-- codice inerente al contenuto centrale della pagina -->
+    <main>
+        <!-- primo blocco sulla sinistra -->
+        <div id="block-1">
+
+            <img id="logo3D" src="../IMG/Logo/Logo3D.png">
+           
+            <section id="block-1-text-sect">
+               
+                <ul id="top-sect">
+                    <p id="name-company">UwU Games Company<p>
+                    <img id="block-1-logo" src="../IMG/Logo/LogoNoBackground.png">
+                </ul>
+                <p id="block-1-subTitle">
+                    "We make games last forever"
+                </p>
+                <p id="block-1-text-1">
+                    Il nuovo launcher pronto per te sia che tu sia un Gamer esperto o alle prime armi.
+                </p>
+
+                <p id="block-1-text-2">
+                    Vuoi anche creare giochi? Noi abbiamo tutto quello di cui hai bisogno.
+                </p>
+
+            </section>
+        </div>
+        <!-- secondo blocco a destra -->
+        <section id="block-2-container"> <!-- c'è un block-container perché essendo che lo volevo allineare a destra gli ho messo un display flex e ho allineato alla fine -->
+            <!-- anche se con l'aggiunta dell'animazione non sarebbe necessario, nel caso togliessi l'animazione almeno sarebbe comunque nella posizione corretta -->
+            <div id="block-2">
+
+                <img id="block-2-image" src="../IMG/Images/gameList.png">
+
+                <section>
+
+                    <p id="block-2-title">
+                        Scopri la nostra gamma di giochi<br> Lavoriamo direttamente con <span id="nPartner">500+</span> partner
+                    </p>
+                    <section id="partnershipImage">
+                        <!-- partner con id singoli perché le immagini hanno dimensioni diverse -->
+                        <img id="logoEA" src="../IMG/Images/PartnerImages/EA.png">
+                        <img id="logoBlizzard" src="../IMG/Images/PartnerImages/Blizzard.png">
+                        <img id="logoInsomniac" src="../IMG/Images/PartnerImages/Insomniac.png">
+                        <img id="logoRockstar" src="../IMG/Images/PartnerImages/RockstarGames.png">
+                        <img id="logoSega" src="../IMG/Images/PartnerImages/SEGA.png">
+                        <img id="logoUbisoft" src="../IMG/Images/PartnerImages/Ubisoft.png">
+                    </section>
+
+                    <section id="block-2-textSect">
+                        <p id="block-2-text-title">
+                            Gamer-Friendly
+                        </p>
+
+                        <p id="block-2-text-sub">
+                            Compra e prova tutti i giochi o risorse che vuoi con una possibilità di rimborso fino a 30 giorni
+                        </p>
+
+                    </section>
+
+                </section>
+            </div>
+        </section>
+
+        <!-- terzo blocco in basso -->
+        <section id="block-3-container"> 
+            <div id="block-3">
+
+                <section class="block-3-sect">
+                    
+                    <div class="block-3-sect-grid">
+                        <p class="b3s-grid-title">
+                            Vuoi sapere di più?
+                        </p>
+                        <p class="b3s-grid-text">
+                            Siamo una start up di ex-gamer che si sono dedicati alla realizzazione di questo progetto perché amiamo il mondo del gaming
+                        </p>
+                        <a href="chiSiamo.html" class="b3s-grid-link-Abutton"> 
+                            SCOPRI DI PIU'
+                        </a>
+                    </div>
+
+                </section>
+                <section class="block-3-sect">
+                    <div class="block-3-sect-grid">
+                        
+                        <p class="b3s-grid-title">
+                            Scarica il nostro Client
+                        </p>
+                        <p class="b3s-grid-text">
+                            Di seguito potrai scaricare il nostro UGC launcher e entrare a fare parte della community da qualsiasi piattaforma ti trovi
+                        </p>
+                        <a href="download.html" class="b3s-grid-link-Abutton"> 
+                            DOWNLOAD
+                        </a>
+
+                    </div>
+                </section>
+                <section class="block-3-sect">
+                    <div class="block-3-sect-grid">
+                        
+                        <p class="b3s-grid-title">
+                            Scopri le tue infinite possibilità
+                        </p>
+                        <p class="b3s-grid-text">
+                            Comincia ora e scopri i nostri giochi in un modo completamente nuovo e mai visto prima d'ora.
+                            <br>Ti aspettiamo gamer
+                        </p>
+                        <a href="esplora.html" class="b3s-grid-link-Abutton">     
+                            ESPLORA
+                        </a>
+                        
+                    </div>
+                </section>
+            </div>
+        </section>
+
+    </main>
+       
+<footer>
+    <section id="footer-elements">
+        <section id="footer-top">
+            <section id="footer-top-left">
+                <img id="footer-logo" src="../IMG/Logo/LogoNoBackground.png" alt="">
+            </section>
+            <section id="footer-top-right">
+                
+                <p id="footer-logo-name">UwU Games Company</p>
+                <ul id="footer-trust">
+                    <p id="footer-trust-text">Trusted by</p>
+
+                    <li id="footer-trust-image-container">
+                        <img class="footer-trust-image" id="footer-trust-image-epic" src="../IMG/Images/TrustPartnerImages/epic.png">
+                        <img class="footer-trust-image" id="footer-trust-image-gog" src="../IMG/Images/TrustPartnerImages/GOG.png">
+                        <img class="footer-trust-image" id="footer-trust-image-steam" src="../IMG/Images/TrustPartnerImages/steam.png">
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section id="footer-down">
+            <button class="footer-down-button">Privacy</button>
+            <button class="footer-down-button">Termini di Servizio</button>
+            <button class="footer-down-button">Chi siamo</button>
+        </section>
+    </section>
+</footer>
+    
+</body>
+</html>
+

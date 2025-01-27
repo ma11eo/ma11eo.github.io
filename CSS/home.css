@@ -1,0 +1,350 @@
+/* 
+blu-scuro
+background: rgb(8, 0, 34);
+gradient giallo viola
+background: linear-gradient(45deg,rgb(247, 227, 7), rgb(116, 2, 215),rgb(247, 227, 7));
+colore blocchi / viola
+color: rgb(43, 0, 80);
+testo "rosa" da titolo
+color: rgb(204, 168, 214);
+testo "rosa" più scuro da titolo
+color: rgb(149, 122, 156);
+testo giallo
+color: rgb(255, 243, 107);
+ombra blu 
+box-shadow: 40px 15px 75px  rgb(20, 1, 86);
+ombra gialla cast
+filter: drop-shadow(0px 0px 5px  rgb(255, 243, 107));
+colore bordo grigio
+border-color:  rgba(127, 127, 127, 0.2);
+viola più chiaro
+color: rgb(116, 2, 215);
+*/
+
+
+/* animazione in entrata del primo blocco */
+@keyframes block1-in { 
+    0%{
+        transform: translateX(-120%);    
+    }
+    70%{
+        transform: translateX(4%);
+    }
+    100%{
+        transform: translateX(2%);
+    }
+}
+/* animazione in entrata del secondo blocco */
+@keyframes block2-in {
+    100%{
+        transform: translateX(120%);    
+    }
+    70%{
+        transform: translateX(-4%);
+    }
+    100%{
+        transform: translateX(-2%);
+    }
+}
+
+body{
+    /* messo perché con l'animazione del secondo blocco la pagina diventa scorribile orizzontalmente e non volevo lo facesse */
+    overflow-x: hidden;
+}
+
+/* primo blocco */
+
+#block-1{
+    margin: 0 0 70px 0;
+    padding: 30px 0 30px 2%;
+
+    border-radius: 10px;
+    transform: translateX(-120%); /* posizione iniziale per evitare problemi visivi con l'animazione*/
+    width: 55%;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    
+    background-color: rgb(43, 0, 80);
+    box-shadow: 0px 10px 75px  rgb(20, 1, 86);
+    animation: block1-in 1s ease forwards;
+}
+/* immagine grande del logo a sinistra */
+#logo3D{
+    width: 100%;
+    border: 2px solid rgb(204, 168, 214);
+    border-radius: 10px;
+}
+
+/* parte a destra dedicata al testo */
+#block-1-text-sect{
+    margin-left: 3%;
+    display: grid;
+    grid-template-rows: 45% 15% 1fr 1fr;
+}
+
+/* parte sopra che contiene titolo e logo 2D */
+#top-sect{
+    display: grid;
+    grid-template-columns: 60% 1fr;
+    
+    align-items: start;
+    gap: 0px;
+}
+
+#block-1-logo{
+    width: 80%;
+    filter: drop-shadow(5px 1px 5px  rgb(255, 243, 107));
+}
+
+#name-company{
+    width: 100%;
+
+    font-weight: 700;
+    font-size: 50px;
+    color:rgb(204, 168, 214);
+}
+
+/* slogan (testo giallo) */
+#block-1-subTitle{
+    padding-top: 15px;
+    
+    font-style: italic;
+    font-weight: 500;
+    font-size: 30px;
+    
+    color: rgb(255, 243, 107);
+    filter: drop-shadow(0px 0px 5px  rgb(255, 243, 107));
+}
+
+/* testi informativi */
+#block-1-text-1, #block-1-text-2{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+#block-1-text-1{
+    margin-top: 10px;
+}
+
+#block-1-text-2{
+    padding-top: 5px;
+}
+
+/* fine primo blocco */
+
+/* blocco 2 */
+#block-2-container{
+    width: 100%;
+    transform: translateX(120%);    
+    
+    display: flex;
+    justify-content: flex-end;
+    
+    animation: block2-in 1s 0.6s ease forwards;
+}
+
+#block-2{
+    margin-bottom:70px;
+    align-self: self-end;
+    width: 55%;
+
+    border-radius: 10px;
+    
+    display: grid;
+    grid-template-columns: 1fr 70%;
+    align-items: center;
+    
+    background-color: rgb(43, 0, 80);
+    box-shadow: 0px 10px 75px  rgb(20, 1, 86);
+    
+    transition: all 0.25s;
+}
+
+#block-2-image{
+    margin: 30px 0;
+    width: 100%;
+
+    filter: drop-shadow(4px 3px 10px  rgb(255, 243, 107));
+}
+
+/* titolo con le partnership */
+#block-2-title{
+    width: 70%;
+    
+    font-weight: 700;
+    font-size: 25px;
+    color:rgb(204, 168, 214);
+}
+
+#nPartner{
+    color: rgb(255, 243, 107);
+}
+
+/* all partnership images */
+#partnershipImage{
+    margin: 2% 0;
+    padding-left: 1%;
+    
+    width:65%;
+    border-radius: 15px;
+    
+    display: flex;
+    align-items: center;
+    gap: 3%;
+    
+    filter: drop-shadow(4px 4px 8px  rgb(255, 243, 107));
+}
+
+/* inizio partnership images */
+#logoEA{
+    width: 11%;
+    height: 11%;
+}
+#logoBlizzard{
+    width: 14%;
+    height: 14%;
+}
+#logoInsomniac{
+    width: 18%;
+    height: 18%;
+}
+#logoRockstar{
+    width: 10%;
+    height: 10%;
+}
+#logoSega{
+    width: 18%;
+    height: 18%;
+    
+}
+#logoUbisoft{
+    width: 12%;
+    height: 12%;
+}
+/* fine partnership images */
+
+#block-2-textSect{
+    display: flex;
+    flex-direction: column;
+}
+
+#block-2-text-title{
+    margin-bottom: 2%;
+
+    width: 100%;
+    text-align: start;
+    
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(255, 243, 107);
+    filter: drop-shadow(0px 0px 5px  rgb(255, 243, 107));
+}
+
+#block-2-text-sub{
+    width: 70%;
+
+    font-size: 20px;
+    font-weight: 500;
+}
+/* fine blocco 2 */
+
+/* inizio blocco 3 */
+#block-3-container{
+    margin-top: 50px;
+    
+    width: 100%;
+    height: 450px;
+    
+    display: block;
+    
+    background-color: white;
+}
+
+#block-3{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    
+    background-color:rgb(9, 0, 37);
+    box-shadow: inset 0px 0px 400px rgba(127, 127, 127, 0.4);
+}
+
+.block-3-sect{
+    height: 100%;
+    
+    border-style: solid;
+    border-top:none;
+    border-bottom: none;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-color:  rgba(127, 127, 127, 0.2);
+    
+    flex:1;
+}
+
+.block-3-sect-grid{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: 25% 30% 1fr;
+}
+/* ho cominciato ad abbreviare perché diventavano troppo lunghe sennò */
+
+.b3s-grid-title{
+    padding-top: 7%;
+    justify-self: center;
+    
+    width: 70%;
+    text-align: center;
+    
+    font-size: 24px;
+    font-weight: 700;
+    color:rgb(204, 168, 214);
+}
+
+.b3s-grid-text{
+    justify-self: center;
+
+    width: 60%;
+    text-align: center;
+    
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+.b3s-grid-link-Abutton{
+    justify-self: center;
+
+    width: 40%;
+    height: 40%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border-radius: 35px;
+    border: none;
+
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(204, 168, 214);;
+    letter-spacing: 2px;
+    text-decoration: none;
+    
+    background: linear-gradient(45deg,rgb(247, 227, 7), rgb(116, 2, 215),rgb(247, 227, 7));
+    
+    transition: all 0.35s;
+}
+.b3s-grid-link-Abutton:hover{
+    width: 43%;
+
+    font-size: 22px;
+    color: rgb(247, 227, 7);
+    letter-spacing: 6px;
+    
+    box-shadow: 0px 0px 40px  rgb(116, 2, 215);
+}

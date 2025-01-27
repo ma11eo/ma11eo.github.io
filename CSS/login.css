@@ -1,0 +1,212 @@
+/* 
+blu-scuro
+background: rgb(8, 0, 34);
+gradient giallo viola
+background: linear-gradient(45deg,rgb(247, 227, 7), rgb(116, 2, 215),rgb(247, 227, 7));
+colore blocchi / viola
+color: rgb(43, 0, 80);
+testo "rosa" da titolo
+color: rgb(204, 168, 214);
+testo "rosa" più scuro da titolo
+color: rgb(149, 122, 156);
+testo giallo
+color: rgb(255, 243, 107);
+ombra blu 
+box-shadow: 40px 15px 75px  rgb(20, 1, 86);
+ombra gialla cast
+filter: drop-shadow(0px 0px 5px  rgb(255, 243, 107));
+*/
+
+/* animazione in entrata del blocco di login */
+@keyframes scale {
+    0%{
+        scale: 0.5;
+    }
+    50%{
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+
+#login-sect-pos{
+    margin-top: 4%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-sect-container{
+    padding: 2%;
+    margin-bottom: 80px;
+    
+    width: 20%;
+    
+    border-radius: 15px;
+    border: none;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    background-color: rgb(43, 0, 80);
+    box-shadow: 0px 0px 100px  rgb(20, 1, 86);
+    
+    transition: all 0.25s;
+    animation: scale 0.4s ease;
+}
+
+/* transizione in hover */
+#login-sect-container:hover{
+    scale: 1.1;
+}
+
+#login-sect-inner{
+    align-self: center;
+    
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#login-title{
+    margin-bottom: 2%;
+    align-self: center;
+    
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(204, 168, 214);
+    
+    filter: drop-shadow(0px 0px 5px  rgb(204, 168, 214));
+}
+
+/* dato da inserire */
+.login-field{
+    margin-bottom: 1%;
+
+    font-size: 22px;
+    font-weight: 500;
+    color: rgb(255, 243, 107);
+}
+
+/* zona in cui inserire il dato */
+.login-input{
+    margin-bottom: 2%;
+    padding: 8px;
+    
+    width: 98%;
+    
+    border-radius: 8px;
+    border: none;
+    
+    font-size: 18px;
+    background-color: rgb(8, 0, 34);
+    
+    transition: all 0.25s;
+}
+
+.login-input::placeholder{
+    color: rgb(149, 122, 156);
+
+    transition: all 0.25s;
+}
+
+.login-input:focus::placeholder{
+    color: white;
+}
+
+.login-input:focus{
+    
+    color: white;
+    outline: none;
+    filter: drop-shadow(0px 0px 2px rgb(204, 168, 214));
+}
+
+/* pulsante di login */
+#login-button{
+    margin-top: 3%;
+    align-self: center;
+
+    width: 80%;
+    height: 60px;
+    
+    border-radius: 15px;
+    border:none;
+    
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    color: rgb(204, 168, 214);
+    
+    background: linear-gradient(45deg,rgb(247, 227, 7), rgb(116, 2, 215),rgb(247, 227, 7));
+    
+    transition: all 0.35s;
+}
+
+#login-button:hover{
+    width: 100%;
+
+    font-size: 28px;
+    letter-spacing: 6px;
+    color: rgb(247, 227, 7);
+
+    box-shadow: 0px 10px 20px  rgb(116, 2, 215);
+}
+
+#spacing{
+    margin-top: 6%;
+    margin-bottom: 2%;
+    
+    width: 100%;
+    height: 2px;
+    
+    background-color: rgba(8, 0, 34, 0.718);
+}
+
+/* parte "accedi con"*/
+#login-other{
+    align-self: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#login-other-title{
+    margin-bottom: 10%;
+    align-self: center;
+
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(204, 168, 214);
+    
+    filter: drop-shadow(0px 0px 5px  rgb(204, 168, 214));
+}
+
+#login-other-images{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+    filter: drop-shadow(1px 1px 8px  rgb(255, 243, 107));
+}
+
+.login-other-eachImage{
+    height: 60px;
+
+    transition: 0.25s;
+}
+
+.login-other-eachImage:hover{
+    scale: 1.1;
+}

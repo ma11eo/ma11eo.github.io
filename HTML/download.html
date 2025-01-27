@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC Download</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/download.css">
+    <link rel="stylesheet" href="../CSS/background.css">
+</head>
+<body>
+    <header>
+        <!-- barra di navigazione con "position:fixed" in modo che rimanga sempre al top della pagina -->
+        <nav id="nav-bar">
+            <!-- logo nav-bar che ti porta alla home se premuto -->
+            <a href="index.html">
+                <img id="navBarLogo" src="../IMG/Logo/LogoNoBackground.png">
+            </a>
+            <!-- parte sinistra della nav-bar -->
+            <ul id="navBarLeft">
+                <input id="searchBar" type="text" placeholder="Non trovi qualcosa? Cercalo">
+                <button id="searchButton">
+                    <img id="searchIcon" src="../IMG/Icons/Search2.png">
+                </button>
+            </ul>
+            <!-- parte destra della nav-bar -->
+            <ul id="navBarRight">
+                <!-- link alla pagina di download -->
+                <a href="download.html">
+                    <button class="navBarButton">
+                        Download
+                    </button>
+                </a>
+                <!-- link alla pagina di esplora -->
+                <a href="esplora.html">
+                    <button class="navBarButton">
+                        Esplora
+                    </button>
+                </a>
+                <!-- link alla pagina di informazioni -->
+                <a href="chiSiamo.html">
+                    <button class="navBarButton">
+                        Chi siamo
+                    </button>
+                </a>
+                <!-- div che contiene i bottoni per accedere e registrarsi in verticale -->
+                <div id="endSect">
+                    <!-- link alla pagina di register -->
+                    <a href="register.html">
+                        <button class="navBarButtonUser">
+                            Registrati
+                        </button>
+                    </a>
+                    <!-- link alla pagina di login -->
+                    <a href="login.html">
+                        <button class="navBarButtonUser">
+                            Accedi
+                        </button>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="background">
+        <span id="bolla1"></span>
+        <span id="bolla2"></span>
+        <span id="bolla3"></span>
+        <span id="bolla4"></span>
+        <span id="bolla5"></span>
+        <span id="bolla6"></span>
+        <span id="bolla7"></span>
+        <span id="bolla8"></span>
+        <span id="bolla9"></span>
+        <span id="bolla10"></span>
+        <span id="bolla11"></span>
+        <span id="bolla12"></span>
+        <span id="bolla13"></span>
+    </section>
+
+    <main>
+        <div id="download-container">
+            
+            <p id="download-title">Scarica ora il nostro launcher ed entra nel vivo dell'azione</p>
+            
+            <section id="vertical-grid">
+                <li id="download-logo-container">
+                    <img id="download-logo-image" src="../IMG/Logo/LogoSlogan.png">
+                </li>
+                <section id="dowload-pattern">
+                    <!-- testo in alto -->
+                    <div id="pattern-top">
+                        <img id="pattern-top-icon" src="../IMG/Icons/Optimize2.png">
+                        <p class="pattern-title">Optimization Boost</p>
+                        <p class="pattern-text">Ottimizzazione personalizzata che ti permetterà di far girare i tuoi giochi al massimo</p>
+                    </div>
+                    
+                    <!-- testo a destra -->
+                    <div id="pattern-right">
+                        <img id="pattern-right-icon" src="../IMG/Icons/FriendList.png">
+                        <p class="pattern-title">Super friends List</p>
+                        <p class="pattern-text">Un'unica lista di tutte le piattaforme in un unico luogo, comodo e personalizzabile</p>
+                    </div>
+                    
+                    <!-- testo in basso -->
+                    <div id="pattern-bottom">
+                        <img id="pattern-bottom-icon" src="../IMG/Icons/Launcher.png">
+                        <p class="pattern-title">Game Launcher</p>
+                        <p class="pattern-text">Avvia giochi da un unico launcher indifferentemente da quale piattaforma tu li abbia aquistati</p>
+                    </div>
+                    
+                    <!-- testo a sinistra -->
+                    <div id="pattern-left">
+                        <img id="pattern-left-icon" src="../IMG/Icons/Cloud.png">
+                        <p class="pattern-title">Easy Cloud</p>
+                        <p class="pattern-text">Sistema di salvataggio nel Cloud automatico e gratuito con spazio illimitato per tutti i tuoi giochi</p>
+                    </div>
+                    
+                    <!-- pulsante centrale di dowload -->
+                    <button id="pattern-center">Download UGC Lancher</button>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-elements">
+            <ul id="footer-top">
+                <li id="footer-top-left">
+                    <img id="footer-logo" src="../IMG/Logo/LogoNoBackground.png" alt="">
+                </li>
+                <li id="footer-top-right">
+                    <p id="footer-logo-name">UwU Games Company</p>
+                    <ul id="footer-trust">
+                        <li>
+                            <p id="footer-trust-text">Trusted by</p>
+                        </li>
+                        <li id="footer-trust-image-container">
+                            <img class="footer-trust-image" id="footer-trust-image-epic" src="../IMG/Images/TrustPartnerImages/epic.png">
+                            <img class="footer-trust-image" id="footer-trust-image-gog" src="../IMG/Images/TrustPartnerImages/GOG.png">
+                            <img class="footer-trust-image" id="footer-trust-image-steam" src="../IMG/Images/TrustPartnerImages/steam.png">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="footer-down">
+                <button class="footer-down-button">Privacy</button>
+                <button class="footer-down-button">Termini di Servizio</button>
+                <button class="footer-down-button">Chi siamo</button>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

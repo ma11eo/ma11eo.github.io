@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC Register</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/register.css">
+    <link rel="stylesheet" href="../CSS/background.css">
+    
+</head>
+<body>
+    
+    <header>
+        <!-- barra di navigazione con "position:fixed" in modo che rimanga sempre al top della pagina -->
+        <nav id="nav-bar">
+            <!-- logo nav-bar che ti porta alla home se premuto -->
+            <a href="index.html">
+                <img id="navBarLogo" src="../IMG/Logo/LogoNoBackground.png">
+            </a>
+            <!-- parte sinistra della nav-bar -->
+            <ul id="navBarLeft">
+                <input id="searchBar" type="text" placeholder="Non trovi qualcosa? Cercalo">
+                <button id="searchButton">
+                    <img id="searchIcon" src="../IMG/Icons/Search2.png">
+                </button>
+            </ul>
+            <!-- parte destra della nav-bar -->
+            <ul id="navBarRight">
+                <!-- link alla pagina di download -->
+                <a href="download.html">
+                    <button class="navBarButton">
+                        Download
+                    </button>
+                </a>
+                <!-- link alla pagina di esplora -->
+                <a href="esplora.html">
+                    <button class="navBarButton">
+                        Esplora
+                    </button>
+                </a>
+                <!-- link alla pagina di informazioni -->
+                <a href="chiSiamo.html">
+                    <button class="navBarButton">
+                        Chi siamo
+                    </button>
+                </a>
+                <!-- div che contiene i bottoni per accedere e registrarsi in verticale -->
+                <div id="endSect">
+                    <!-- link alla pagina di register -->
+                    <a href="register.html">
+                        <button class="navBarButtonUser">
+                            Registrati
+                        </button>
+                    </a>
+                    <!-- link alla pagina di login -->
+                    <a href="login.html">
+                        <button class="navBarButtonUser">
+                            Accedi
+                        </button>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <!--
+        background a bolle animate, puramente estetico e nemmeno fatto benissimo
+        perché devo farlo partire da una determinata altezza ma senza JS non posso salvare l'altezza della pagina
+        e quindi non è detto che sia sempre il fondo o come nella pagina di login che è troppo in basso
+    -->
+    <section id="background">
+        <span id="bolla1"></span>
+        <span id="bolla2"></span>
+        <span id="bolla3"></span>
+        <span id="bolla4"></span>
+        <span id="bolla5"></span>
+        <span id="bolla6"></span>
+        <span id="bolla7"></span>
+        <span id="bolla8"></span>
+        <span id="bolla9"></span>
+        <span id="bolla10"></span>
+        <span id="bolla11"></span>
+        <span id="bolla12"></span>
+        <span id="bolla13"></span>
+    </section>
+    
+    <main id="register-sect-pos"> <!-- posizione form di register -->
+        <div id="register-sect-container">
+
+            <p id="register-title">Registrati</p>
+            <!-- inizio form -->
+            <form id="register-sect-inner">
+
+                <label class="register-field">
+                    E-mail:
+                </label>
+                <input class="register-input" type="text" id="email" placeholder="xyz@gmail.com">
+                <label class="register-field">
+                    Nome utente:
+                </label>
+                <input class="register-input" type="text" id="username" placeholder="username">
+                <label class="register-field">
+                    Password:
+                </label>
+                <input class="register-input" type="text" id="password" placeholder="password">
+                
+                <button id="register-button">Registrati</button>
+            </form>
+            <!-- fine form -->
+
+            <div id="spacing"></div> <!-- div che "contiene" la riga tra il registrati e "registrati con"-->
+
+            <section id="register-other">
+                <p id="register-other-title">
+                    Oppure registrati con
+                </p>
+                <div id="register-other-images">
+                    <img class="register-other-eachImage" src="../IMG/Images/LoginImages/google.png">
+                    <img class="register-other-eachImage" src="../IMG/Images/LoginImages/epic.png">
+                    <img class="register-other-eachImage" src="../IMG/Images/LoginImages/steam.png">
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div id="footer-elements">
+            <ul id="footer-top">
+                <li id="footer-top-left">
+                    <img id="footer-logo" src="../IMG/Logo/LogoNoBackground.png" alt="">
+                </li>
+                <li id="footer-top-right">
+                    <p id="footer-logo-name">UwU Games Company</p>
+                    <ul id="footer-trust">
+                        <li>
+                            <p id="footer-trust-text">Trusted by</p>
+                        </li>
+                        <li id="footer-trust-image-container">
+                            <img class="footer-trust-image" id="footer-trust-image-epic" src="../IMG/Images/TrustPartnerImages/epic.png">
+                            <img class="footer-trust-image" id="footer-trust-image-gog" src="../IMG/Images/TrustPartnerImages/GOG.png">
+                            <img class="footer-trust-image" id="footer-trust-image-steam" src="../IMG/Images/TrustPartnerImages/steam.png">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="footer-down">
+                <button class="footer-down-button">Privacy</button>
+                <button class="footer-down-button">Termini di Servizio</button>
+                <button class="footer-down-button">Chi siamo</button>
+            </ul>
+        </div>
+    </footer>
+</body>
+    <script>
+        const user = document.getElementById("username")  //salvo il valore in una CONST, non posso rischiare il dato dato in input dall'utente
+        const password = document.getElementById("password")
+
+        const registra = document.getElementById("register-button")
+
+        registra.addEventListener("click", function(e) {
+            console.log(user);  //stampa l'html di riferimento
+            console.log(user.value); //stampa il valore
+            console.log(typeof user.value); //per vedere il tipo
+            
+
+            //Stampare una stringa
+            alert("Ciao " + user.value + " " + password.value);
+        })
+
+    </script>
+</html>
+

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC game collection</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/gameCollection.css">
+</head>
+<body>
+    <header>
+        <!-- barra di navigazione con "position:fixed" in modo che rimanga sempre al top della pagina -->
+        <nav id="nav-bar">
+            <!-- logo nav-bar che ti porta alla home se premuto -->
+            <a href="index.html">
+                <img id="navBarLogo" src="../IMG/Logo/LogoNoBackground.png">
+            </a>
+            <!-- parte sinistra della nav-bar -->
+            <ul id="navBarLeft">
+                <input id="searchBar" type="text" placeholder="Non trovi qualcosa? Cercalo">
+                <button id="searchButton">
+                    <img id="searchIcon" src="../IMG/Icons/Search2.png">
+                </button>
+            </ul>
+            <!-- parte destra della nav-bar -->
+            <ul id="navBarRight">
+                <!-- link alla pagina di download -->
+                <a href="download.html">
+                    <button class="navBarButton">
+                        Download
+                    </button>
+                </a>
+                <!-- link alla pagina di esplora -->
+                <a href="esplora.html">
+                    <button class="navBarButton">
+                        Esplora
+                    </button>
+                </a>
+                <!-- link alla pagina di informazioni -->
+                <a href="chiSiamo.html">
+                    <button class="navBarButton">
+                        Chi siamo
+                    </button>
+                </a>
+                <!-- div che contiene i bottoni per accedere e registrarsi in verticale -->
+                <div id="endSect">
+                    <!-- link alla pagina di register -->
+                    <a href="register.html">
+                        <button class="navBarButtonUser">
+                            Registrati
+                        </button>
+                    </a>
+                    <!-- link alla pagina di login -->
+                    <a href="login.html">
+                        <button class="navBarButtonUser">
+                            Accedi
+                        </button>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-container">
+        <!-- parte sopra con testo e barra di ricerca -->
+        <section id="game-collection-top">
+            <ul id="game-collection-text-container"> 
+                <p id="game-collection-Title">
+                    Ecco la raccolta di giochi completa a tua disposizione!
+                </p>
+            </ul>
+
+            <ul id="game-collection-bar">
+                <input id="game-collection-searchBar" type="text" placeholder="Inserisci e trova il gioco dei tuoi sogni">
+                <img id="game-collection-searchBar-icon" src="../IMG/Icons/Search2.png">
+            </ul>
+        </section>
+        <!-- parte con la raccolta di giochi -->
+        <section id="games-grid">
+            
+            <ul id="games-grid-sort">
+                <p id="games-grid-sort-text">Ordina per </p>
+                <!-- pulsanti per l'ordinamento -->
+                <button class="games-grid-sort-button">Ordine alfabetico</button>
+                <button class="games-grid-sort-button">Prezzo crescente</button>
+                <button class="games-grid-sort-button">Prezzo decrescente</button>
+                <button class="games-grid-sort-button">Più venduti</button>
+            </ul>
+            <section>
+                <!--
+                    qui ci sono tutti i giochi, so che non è il modo più corretto per programmarlo ma senza javascript non sapre come altro fare
+                    Lei ci aveva detto di far pesare poco il sito però rispetto alla quantità di immagini che ci siano penso sia anche poco quindi spero lo guardi in propozione
+                    Inoltre c'è un animazione in entrata però essendo che ci sono così tante immagini non si vede perché deve caricarle.
+                -->
+                <!-- "ol" perché sta per order list e sono ordinati in ordine alfabetico -->
+                <ol id="games-grid-collection">
+                    <!--
+                        ogni game-container è lo spazio dato a ogni gioco
+                        al suo interno coniente il gioco in sé e se passi sopra l'immagine compare anche il prezzo insieme ad altre animazioni/transizioni
+                    -->
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">2.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Rythm/ADanceOFFAI.jpg">
+                            </li>
+                            <li class="game-text-container">
+                            <p class="game-text" style="font-size: 16px;">Dance Of Fire And Ice</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">40.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Horror/Alien.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Alien: Isolation</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">39.99</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Rythm/Arcaea.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Arcaea</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">40.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/AssettoCorsaComp.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Assetto Corsa Comp</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">21.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/BeamNG.jpeg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">BeamNG</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">29.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Rythm/BeatSaber.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Beat Saber</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">80.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Shooter/Borderlands3.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Borderlands 3</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">60.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Shooter/CallOfDutyBlackOps4.png">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">COD Black Ops 4</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">80.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Shooter/CallOfDutyMW3.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">COD Modern Warfare 3</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">90.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Action/CP77.jpeg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Cyberpunk 2077</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Romance/CrushCrush.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Crush Crush</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Shooter/CsGo.png">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Counter Strike</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">20.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Horror/DeadByDeadlight.jpeg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Dead By Deadlight</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">60.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Action/DeadIsland2.jpeg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Dead Island 2</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Action/Destiny2.webp">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Destiny 2</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">65.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Action/DragonDogma2.avif">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Dragon's Dogma II</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">65.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Horror/DyingLight.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Dying Light</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">20.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/EuroTruckS2.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Euro Truck Simulator 2</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">60.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/ExpeditionMudRunner.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Expedition Mud Runner</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">80.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/F124.png">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">F1 24</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">20.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Adventure/Fallout4.png">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Fallout 4</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">20.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Horror/Fallout76.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Fallout 76</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">90.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/FH4.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Forza Horizon 4</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">100.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/FH5.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Forza Horizon 5</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">70.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/FlightSimulator.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Flight Simulator</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Shooter/Fortnite.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Fortnite</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">40.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/ForzaMotosport.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Forza Motosport</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Rythm/FridayFN.png">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Friday Funkin Night</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">19.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Adventure/GTA5.jpeg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Grand Theft Auto IV</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">9.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Horror/LethalCompany.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Lethal Company</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Action/LostArk.webp">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Lost Ark</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">1.59€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Romance/LoveChoice.jpeg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Love Choice</p>
+                            </li>
+                        </ul>
+                    </div>
+                
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">24.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Adventure/MegatonMusashi.png">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Megaton Musashi W</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">29.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Adventure/MonsterHunterWorld.jpeg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Monster Hunter World</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">50.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/MotoGp24.png">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">MotoGp 24</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Rythm/Osu!.png">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Osu!</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">29.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Shooter/Overwatch.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Overwatch</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">23.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Romance/P5R.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Persona 5 Royal</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Romance/Palia.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Palia</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">29.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Action/Palworldjpg.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Palworld</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">13.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Horror/Phasmophobiajpg.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Phasmophobia</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Rythm/Quaver.jpeg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Quaver</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">29.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Shooter/RainbowSixS.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Rainbow Six Seige</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">60.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Adventure/RDR2.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Red Dead Redemption II</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">9.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Horror/Remnant2.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Remnant II</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">40.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Action/ResidentEvil2.avif">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Resident Evil 2</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">70.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Action/Sekiro.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Sekiro</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Adventure/Sky.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Sky: Son Of Light</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">29.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Horror/SonsOFTheForest.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Sons Of The Forest</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Rythm/SoundSpacePlus.png">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Sound Space Plus</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">29.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Adventure/Stray.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Stray</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">29.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Adventure/Subnautica.png">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Subnautica</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">9.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Adventure/Terraria.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Terraria</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">39.99€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Romance/TheSims4.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">The Sims 4</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">20.00€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Driving&Simulation/TTisleOfMan.jpeg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">TT Isle Of Man 3</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">1.19€</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Romance/UltimateAnime.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Ultimate Anime</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Shooter/Valorant.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Valorant</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="game-container">
+                        <ul class="game">
+                            <li class="game-image-container">
+                                <div class="price">Free</div>
+                                <img class="game-image" src="../IMG/Images/GamesImages/Shooter/Warframe.jpg">
+                            </li>
+                            <li class="game-text-container">
+                                <p class="game-text">Warfare</p>
+                            </li>
+                        </ul>
+                    </div>
+                
+                </ol>
+            </section>
+        </section>
+    </main>
+    
+    <footer>
+        <div id="footer-elements">
+            <ul id="footer-top">
+                <li id="footer-top-left">
+                    <img id="footer-logo" src="../IMG/Logo/LogoNoBackground.png" alt="">
+                </li>
+                <li id="footer-top-right">
+                    <p id="footer-logo-name">UwU Games Company</p>
+                    <ul id="footer-trust">
+                        <li>
+                            <p id="footer-trust-text">Trusted by</p>
+                        </li>
+                        <li id="footer-trust-image-container">
+                            <img class="footer-trust-image" id="footer-trust-image-epic" src="../IMG/Images/TrustPartnerImages/epic.png">
+                            <img class="footer-trust-image" id="footer-trust-image-gog" src="../IMG/Images/TrustPartnerImages/GOG.png">
+                            <img class="footer-trust-image" id="footer-trust-image-steam" src="../IMG/Images/TrustPartnerImages/steam.png">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="footer-down">
+                <button class="footer-down-button">Privacy</button>
+                <button class="footer-down-button">Termini di Servizio</button>
+                <button class="footer-down-button">Chi siamo</button>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

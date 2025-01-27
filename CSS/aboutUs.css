@@ -1,0 +1,264 @@
+/* 
+blu-scuro
+background: rgb(8, 0, 34);
+blu un po' più chiaro
+background-color: rgb(11, 0, 46);
+gradient giallo viola
+background: linear-gradient(45deg,rgb(247, 227, 7), rgb(116, 2, 215),rgb(247, 227, 7));
+colore blocchi / viola
+color: rgb(43, 0, 80);
+testo "rosa" da titolo
+color: rgb(204, 168, 214);
+testo "rosa" più scuro da titolo
+color: rgb(149, 122, 156);
+testo giallo
+color: rgb(255, 243, 107);
+ombra blu 
+box-shadow: 40px 15px 75px  rgb(20, 1, 86);
+ombra gialla cast
+filter: drop-shadow(0px 0px 5px  rgb(255, 243, 107));
+colore bordo grigio
+border-color:  rgba(127, 127, 127, 0.2);
+viola più chiaro
+color: rgb(116, 2, 215);
+*/
+
+/* animazione in hover dell'immagine*/
+@keyframes blur {
+    0%{
+        filter: blur(4px);
+        transform: scale(1, 1);
+    }
+    50%{
+        transform: scale(1.08, 1.08);
+    }
+    100%{
+        transform: scale(1,1);
+        filter: blur(0px);
+    }
+}
+
+/* animazione in entrata del blocco*/
+@keyframes drop {
+    0%{
+        transform: translate(1000px,-700px);
+        opacity: 50%;
+    }
+    50%{
+        transform: translate(-20px,20px);
+    }
+    100%{
+        transform: translate(0px,0px);
+        opacity: 100%;
+    }
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    /*
+        ho messo il padding perché a causa dell'animazione farebbe overflow ma nascondendolo
+        mi taglia l'ombra del blocco e quindi uso il padding per evitarlo
+    */
+    padding: 30px 0px 90px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    overflow-x: hidden;
+    
+}
+
+/* blocco che entra */
+#aboutUs-container{
+    width: 60%;
+    height: 700px;
+    padding: 3% 1.5% 1% 1.5%;
+    box-sizing: border-box;
+
+    border-radius: 40px;
+    
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1%;
+
+    background-color: rgb(11, 0, 46);
+    box-shadow: 0px 8px 75px  rgb(20, 1, 86);
+
+    animation: drop 1.2s ease forwards;
+}
+
+/* testo in alto */
+#top-section-text{
+    font-size: 28px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: rgb(204, 168, 214);
+}
+
+/* sezione centrale */
+#center-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+#left-section-image-container{
+    width: 100%;
+    height: 95%;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+#left-section-image-container:hover #left-section-image{
+    animation: blur 0.3s linear forwards;
+    transform: scale(1.1, 1.1);
+}
+
+#left-section-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#right-section{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 15px;
+}
+
+.right-section-text{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+#aboutUs-name-company{
+    font-size: 25px;
+    font-weight: 600;
+    font-style: italic;
+    color:rgb(255, 243, 107);
+}
+
+#right-center-section{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.rc-inner-section{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* barra dei progressi/eventi */
+.progress-bar{    
+    position: absolute;
+    top:60px;
+    left: 5%;
+
+    width: 90%;
+    height: 3px;
+    
+    background-color:rgba(255, 243, 107, 0.491);
+
+}
+.inner-progress-bar{
+    position: relative;
+}
+
+/* pallini che rappresentano i progressi/obiettivi */
+.progress-point{
+    position: absolute;
+    top: -20px;
+    
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 50%;
+    border: 2px solid rgba(255, 243, 107, 0.491);
+    
+    box-shadow: inset 0 0 50px rgba(255, 243, 107, 0.4);
+    background: rgb(11, 0, 46);
+
+    transition: all 0.35s;
+}
+
+.progress-point:hover{
+    transform: scale(1.08, 1.08);
+    box-shadow: inset 0 0 50px rgba(255, 243, 107, 0.6);
+    filter: drop-shadow(0 0 5px rgba(255, 243, 107, 0.8));
+}
+
+.progress-point:hover .progress-point-image{
+    margin-top: 5px;
+    transform: scale(1.08, 1.08);
+    filter: drop-shadow(0px -1px 2px  rgb(255, 243, 107));
+}
+
+/* nth-child per riferisci al Nesimo elemento con la classe "progress-point" */
+.progress-point:nth-child(1){
+    left: 9%;
+}
+.progress-point:nth-child(2){
+    left: 34%;
+}
+.progress-point:nth-child(3){
+    left: 59%;
+}
+.progress-point:nth-child(4){
+    left: 83%;
+}
+
+/* container che tiene l'immagine della freccia dentro */
+.inner-progress-point{
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* icona della freccia */
+.progress-point-image{
+    width: 50%;
+    height: 50%;
+    
+    transition: all 0.35s;
+}
+
+.progress-text-container{
+    margin-top: 62px;
+    padding: 0 30px 0 30px;
+
+    width: 100%;
+    box-sizing: border-box;
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.progress-text{
+    flex:1;
+    text-align: center;
+    /* testo trasparente e background solo sul testo in modo che abbia l'effetto sfumato */
+    color: transparent;
+    font-weight: 500;
+    
+    background: linear-gradient(rgb(255, 243, 107),rgba(116, 2, 215, 1));
+    background-clip: text;
+}
+
+.progress-date{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(255, 243, 107);
+}

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UGC infos</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/background.css">
+    <link rel="stylesheet" href="../CSS/aboutUs.css">
+</head>
+<body>
+
+    <header>
+        <!-- barra di navigazione con "position:fixed" in modo che rimanga sempre al top della pagina -->
+        <nav id="nav-bar">
+            <!-- logo nav-bar che ti porta alla home se premuto -->
+            <a href="index.html">
+                <img id="navBarLogo" src="../IMG/Logo/LogoNoBackground.png">
+            </a>
+            <!-- parte sinistra della nav-bar -->
+            <ul id="navBarLeft">
+                <input id="searchBar" type="text" placeholder="Non trovi bollaualcosa? Cercalo">
+                <button id="searchButton">
+                    <img id="searchIcon" src="../IMG/Icons/Search2.png">
+                </button>
+            </ul>
+            <!-- parte destra della nav-bar -->
+            <ul id="navBarRight">
+                <!-- link alla pagina di download -->
+                <a href="download.html">
+                    <button class="navBarButton">
+                        Download
+                    </button>
+                </a>
+                <!-- link alla pagina di esplora -->
+                <a href="esplora.html">
+                    <button class="navBarButton">
+                        Esplora
+                    </button>
+                </a>
+                <!-- link alla pagina di informazioni -->
+                <a href="chiSiamo.html">
+                    <button class="navBarButton">
+                        Chi siamo
+                    </button>
+                </a>
+                <!-- div che contiene i bottoni per accedere e registrarsi in verticale -->
+                <div id="endSect">
+                    <!-- link alla pagina di register -->
+                    <a href="register.html">
+                        <button class="navBarButtonUser">
+                            Registrati
+                        </button>
+                    </a>
+                    <!-- link alla pagina di login -->
+                    <a href="login.html">
+                        <button class="navBarButtonUser">
+                            Accedi
+                        </button>
+                    </a>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="background">
+        <span id="bolla1"></span>
+        <span id="bolla2"></span>
+        <span id="bolla3"></span>
+        <span id="bolla4"></span>
+        <span id="bolla5"></span>
+        <span id="bolla6"></span>
+        <span id="bolla7"></span>
+        <span id="bolla8"></span>
+        <span id="bolla9"></span>
+        <span id="bolla10"></span>
+        <span id="bolla11"></span>
+        <span id="bolla12"></span>
+        <span id="bolla13"></span>
+    </section>
+
+    <main>
+        <div id="aboutUs-container">
+
+            <!-- titolo in alto -->
+            <p id="top-section-text">Chi siamo</p>
+            
+            <!-- immagine e testi -->
+            <section id="center-section">
+
+                <!-- parte con l'immagine -->
+                <section id="left-section">
+                    <div id="left-section-image-container">
+                        <img id="left-section-image" src="../IMG/Images/Team/Team.jpg">
+                    </div>
+                </section>
+                
+                <!-- parte con testo e barra dei progressi -->
+                <section id="right-section">
+                    <p class="right-section-text">
+                        <!-- nome compagnia giallo e con font italic -->
+                        <span id="aboutUs-name-company">UwU Games Company</span> è una start-up creata da gamer e ex-gamer che si sono uniti per dare ai nuovi videogiocatori un esperienza completa
+                        e ottimale per divertirsi in sicurezza.
+                    </p>
+
+                    <section id="right-center-section">
+
+                        <div class="rc-inner-section">
+                            <!-- parte dei progressi -->
+                            <p class="right-section-text">I nostri progressi</p>
+                            <!-- barra dei progressi (forse realizzabile in modo migliore) -->
+                            <div class="progress-bar">
+
+                                <section class="inner-progress-bar">
+                                    <!-- ogni progress point è un "pallino" -->
+                                    <div class="progress-point">
+                                        <div class="inner-progress-point">
+                                            <img class="progress-point-image" src="../IMG/Icons/arrow.png">
+                                        </div>
+                                    </div>
+                                    <div class="progress-point">
+                                        <div class="inner-progress-point">
+                                            <img class="progress-point-image" src="../IMG/Icons/arrow.png">
+                                        </div>
+                                    </div>
+                                    <div class="progress-point">
+                                        <div class="inner-progress-point">
+                                            <img class="progress-point-image" src="../IMG/Icons/arrow.png">
+                                        </div>
+                                    </div>
+                                    <div class="progress-point">
+                                        <div class="inner-progress-point">
+                                            <img class="progress-point-image" src="../IMG/Icons/arrow.png">
+                                        </div>
+                                    </div>
+                                    
+                                </section>
+                            </div>
+
+                            <!-- testi dei progressi -->
+                            <div class="progress-text-container">
+                                <p class="progress-text">
+                                    <span class="progress-date">2020</span><br>Apertura compagnia
+                                </p>
+                                <p class="progress-text">
+                                    <span class="progress-date">2021</span><br>Collaborazione con numerosi studi di sviluppo videogiochi
+                                </p>
+                                <p class="progress-text">
+                                    <span class="progress-date">2022</span><br>Collaborazione con altri store online come<br>Epic Game e Steam
+                                </p>
+                                <p class="progress-text">
+                                    <span class="progress-date">2023</span><br>1 Mln di utenti attivi sulla piattaforma   
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- stessa cosa ma con gli obiettivi -->
+                        <div class="rc-inner-section">
+
+                            <p class="right-section-text">I nostri Obiettivi</p>
+                            
+                            <div class="progress-bar">
+                                <div class="inner-progress-bar">
+                                    <!-- ogni progress point è un "pallino" -->
+                                    <div class="progress-point">
+                                        <div class="inner-progress-point">
+                                            <img class="progress-point-image" src="../IMG/Icons/arrow.png">
+                                        </div>
+                                    </div>
+                                    <div class="progress-point">
+                                        <div class="inner-progress-point">
+                                            <img class="progress-point-image" src="../IMG/Icons/arrow.png">
+                                        </div>
+                                    </div>
+                                    <div class="progress-point">
+                                        <div class="inner-progress-point">
+                                            <img class="progress-point-image" src="../IMG/Icons/arrow.png">
+                                        </div>
+                                    </div>
+                                    <div class="progress-point">
+                                        <div class="inner-progress-point">
+                                            <img class="progress-point-image" src="../IMG/Icons/arrow.png">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <!-- testi obiettivi -->
+                            <div class="progress-text-container">
+                                <p class="progress-text">
+                                    <span class="progress-date">2025</span><br>Collaborazione con Sony, Xbox e Nintendo, e aggiunta dei giochi console
+                                </p>
+                                <p class="progress-text">
+                                    <span class="progress-date">2028</span><br>Creazione di <br>un nuovo <br>game engine marchiato UGC   
+                                </p>
+                                <p class="progress-text">
+                                    <span class="progress-date">2032</span><br>Apertura di sedi dedicate allo sviluppo di videogiochi   
+                                </p>
+                                <p class="progress-text">
+                                    <span class="progress-date">2035</span><br>Chiusura compagnia<br> (non mi vengono idee su cosa mettere)
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-elements">
+            <ul id="footer-top">
+                <li id="footer-top-left">
+                    <img id="footer-logo" src="../IMG/Logo/LogoNoBackground.png" alt="">
+                </li>
+                <li id="footer-top-right">
+                    <p id="footer-logo-name">UwU Games Company</p>
+                    <ul id="footer-trust">
+                        <li>
+                            <p id="footer-trust-text">Trusted by</p>
+                        </li>
+                        <li id="footer-trust-image-container">
+                            <img class="footer-trust-image" id="footer-trust-image-epic" src="../IMG/Images/TrustPartnerImages/epic.png">
+                            <img class="footer-trust-image" id="footer-trust-image-gog" src="../IMG/Images/TrustPartnerImages/GOG.png">
+                            <img class="footer-trust-image" id="footer-trust-image-steam" src="../IMG/Images/TrustPartnerImages/steam.png">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="footer-down">
+                <button class="footer-down-button">Privacy</button>
+                <button class="footer-down-button">Termini di Servizio</button>
+                <button class="footer-down-button">Chi siamo</button>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

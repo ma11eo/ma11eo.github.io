@@ -1,0 +1,368 @@
+/* 
+blu-scuro
+background: rgb(8, 0, 34);
+blu un po' più chiaro
+background-color: rgb(11, 0, 46);
+gradient giallo viola
+background: linear-gradient(45deg,rgb(247, 227, 7), rgb(116, 2, 215),rgb(247, 227, 7));
+colore blocchi / viola
+color: rgb(43, 0, 80);
+testo "rosa" da titolo
+color: rgb(204, 168, 214);
+testo "rosa" più scuro da titolo
+color: rgb(149, 122, 156);
+testo giallo
+color: rgb(255, 243, 107);
+ombra blu 
+box-shadow: 40px 15px 75px  rgb(20, 1, 86);
+ombra gialla cast
+filter: drop-shadow(0px 0px 5px  rgb(255, 243, 107));
+colore bordo grigio
+border-color:  rgba(127, 127, 127, 0.2);
+viola più chiaro
+color: rgb(116, 2, 215);
+testo azzuro
+color: rgb(0, 88, 221);
+*/
+
+
+/* animazione in entrata del gioco */
+@keyframes game-in {
+    0%{
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        height: 340px;
+        opacity: 100%;
+    }
+}
+
+/* seconda animazione del gioco in entrata*/
+@keyframes game-in-scale {
+    0%{
+        transform: scaleX(1);
+    }
+    70%{
+        transform: scaleX(1.05);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+/* animazione barra di ricerca in ingresso */
+@keyframes bar-in {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+
+/* animazione in entrata icona di ricerca */
+@keyframes icon-in {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+
+#main-container{
+    margin: 5% 0 50px 0;
+    padding: 0 0 30px;
+
+    width: 100%;
+    
+    display: grid;
+    grid-template-rows: 100px 1fr;
+
+    background-color: rgb(11, 0, 46);
+}   
+
+/* parte sopra con titilo e barra di ricerca */
+#game-collection-top{
+    padding: 2% 2% 2% 1%;
+    
+    box-sizing: border-box;
+    
+    width: 100%;
+    height: 120px;
+    
+    display: flex;
+    flex-direction: rows;
+    align-items: center;
+    gap: 5%;
+}    
+
+#game-collection-text-container{
+    flex: 1;
+}
+
+#game-collection-Title{
+    width: 100%;
+
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(204, 168, 214);
+}
+
+#game-collection-bar{
+    flex: 1;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1%;
+}
+
+#game-collection-searchBar{
+    padding-left: 8px;
+
+    width: 100%;
+    height: 40px;
+    
+    border-radius: 26px;
+    border: 2px solid transparent;
+    
+    font-size: 18px;
+    
+    background-color: rgb(8, 0, 34);
+    
+    animation: bar-in 0.6s ease-in forwards;
+    transition: all 0.25s;
+}
+
+#game-collection-searchBar:hover{
+    scale: 1.01;
+    filter: drop-shadow(0px 0px 2px rgb(204, 168, 214));
+}
+
+#game-collection-searchBar:focus{
+    outline: none;
+    border-color:  rgb(204, 168, 214);
+
+    color:rgb(204, 168, 214);
+}
+
+#game-collection-searchBar::placeholder{
+    color: rgb(149, 122, 156);
+    transition: all 0.25s;
+}
+
+#game-collection-searchBar:focus::placeholder{
+    color: rgb(204, 168, 214);
+}
+
+#game-collection-searchBar-icon{
+    height: 30px;
+
+    animation: icon-in 0.5s ease forwards;
+    transition: all 0.25s;
+}
+
+#game-collection-searchBar-icon:hover{
+    scale: 1.15;
+    filter: drop-shadow(0px 0px 2px rgb(204, 168, 214));
+}
+
+#game-collection-searchBar-icon:active{
+    scale: 1;
+}
+
+/* parte con la griglia dei giochi e il loro ordinamento */
+#games-grid{
+    display: grid;
+    grid-template-rows: 80px 1fr;
+}
+
+/* parte "ordina per.." */
+#games-grid-sort{
+    padding: 1%;
+    box-sizing: border-box;
+    
+    width: 100%;
+    
+    border: 2px solid rgb(11, 0, 46);
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.7%;
+}
+
+#games-grid-sort-text{
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(204, 168, 214);
+}
+
+/* bottoni di ordinamento */
+.games-grid-sort-button{
+    padding: 0.4%;
+    box-sizing: border-box;
+    
+    height: 100%;
+    
+    border: 2px solid transparent;
+    border-radius: 15px;
+    
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(204, 168, 214);
+    background: transparent;
+    
+    transition: all 0.25s;
+}
+
+.games-grid-sort-button:hover{
+    border-color: rgb(20, 1, 86);
+
+    color: white;
+    background:  rgba(255, 255, 255, 0.088);
+}
+
+/* grilia che contiene i giochi con colonen fisse */
+#games-grid-collection{
+    padding: 1%;
+    margin: 0 1% 50px;
+    box-sizing: border-box;
+    
+    height: 100%;
+    
+    border: 2px solid  rgb(4, 0, 113);
+    border-radius: 15px;
+ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+    
+    background:  rgb(8, 0, 34);
+    box-shadow: inset 0 0 10px rgb(4, 0, 113);;
+}
+
+/* container del gioco */
+.game-container{
+    width: 100%;
+    height: 340px;
+    
+    border-radius: 20px;
+    border: 2px solid rgb(4, 0, 113);
+    
+    background: radial-gradient(rgb(4, 0, 113),rgb(4, 0, 113), transparent);
+    
+    opacity: 0;
+    overflow: hidden;
+    
+    animation: game-in 0.5s ease forwards, game-in-scale 0.5s 0.2s ease forwards;
+    transition: all 0.25s;
+}
+
+/* gioco in sé */
+.game{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 1fr 10%;
+}
+
+/* container immagine del gioco */
+.game-image-container{
+    align-self: center;
+    justify-self: center;
+    
+    position: relative;
+    
+    height: 95%;
+    width: 95%;
+    
+    border-radius: 20px;
+    
+    overflow: hidden;
+    
+    transition: all 0.25s;
+}
+
+/* prezzo del gioco che si vede quando passi sopra l'immagine */
+.price{
+    top:-40px;
+    left: 40%;
+    padding: 0;
+
+    position: absolute;
+    
+    border-radius: 20px;
+    
+    font-size: 600;
+    color: rgb(204, 168, 214);
+    background-color: rgba(8, 0, 34, 0.82);
+    
+    opacity: 0;
+    
+    transition: all 0.35s;
+}
+
+.game-image-container:hover .price{
+    left: 38%;
+    padding: 1% 3%;
+    
+    transform: translateY(60px);
+    
+    opacity: 1;
+    
+    z-index: 1;
+}
+
+.game-image{
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+}
+
+/* titolo del gioco */
+.game-text-container{
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.game-text{
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(0, 88, 221);
+    
+    filter: drop-shadow(0 0 5px  rgb(0, 88, 221));
+    transition: all 0.25s;
+}
+
+/* transizione quando passi sopra il gioco */
+.game-container:hover .game-image-container{
+    width: 100%;
+    height: 100%;
+}
+.game-container:hover .game-text{
+    letter-spacing: 2px;
+    color:rgb(0, 95, 238);
+
+    filter: drop-shadow(0 0 5px  rgb(0, 95, 238));
+}
+.game-container:hover{
+    border: 2px solid rgb(6, 0, 174);
+
+    background: radial-gradient(rgb(6, 0, 174),rgb(6, 0, 174), transparent);
+    box-shadow: 0 0 20px rgb(6, 0, 174);
+}
